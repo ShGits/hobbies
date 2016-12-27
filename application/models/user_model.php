@@ -30,7 +30,7 @@ class User_model extends CI_Model {
         return $this->db->get($dbtable);
     }
     function confirm_registration($activation_code)
-        /* ìåòîä confirm_registration â êëàññå ìîäåëè «User» */
+        /* Ã¬Ã¥Ã²Ã®Ã¤ confirm_registration Ã¢ ÃªÃ«Ã Ã±Ã±Ã¥ Ã¬Ã®Ã¤Ã¥Ã«Ã¨ Â«UserÂ» */
     {
         $query="SELECT activation_code  FROM users WHERE activation_code = ?";
         $result=$this->db->query($query, $activation_code);
@@ -44,11 +44,10 @@ class User_model extends CI_Model {
         }
     }
     function forgot_password($email, $password)
-        /* ìåòîä forgot_password â ìîäåëè  «User» */
+        /* Ã¬Ã¥Ã²Ã®Ã¤ forgot_password Ã¢ Ã¬Ã®Ã¤Ã¥Ã«Ã¨  Â«UserÂ» */
     {
-        $this->db->set('password', $password);
-        $this->db->where('email', $email);
-        return $this->db->update('users');
+        return $this->db->set('password', $password)
+            ->where('email', $email)->update('users');
     }
     function get_user_email($email) {
         $query="SELECT email  FROM users WHERE  email = ?";
