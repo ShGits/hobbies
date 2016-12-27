@@ -73,5 +73,7 @@ $route['default_controller'] = 'pages/view';
 //$route['news/(:any)'] = 'news/user';
 //$route['news'] = 'news';
 //$route['(:any)'] = 'pages/view/$l';
+$route['login'] = 'users/login';
+
 $route['default_controller'] = 'main';
 
