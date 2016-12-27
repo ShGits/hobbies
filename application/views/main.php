@@ -28,7 +28,7 @@
 			<a href='#end'><li>Про проект</li></a>
 			<a href='#end'><li>Контакти</li></a>
 <!-- тут я добавил -->
-            <li><a href='users'>Login</a></li>
+            <li><a href='/users'>Login</a></li>
 
 		</menu>
 	</header>
