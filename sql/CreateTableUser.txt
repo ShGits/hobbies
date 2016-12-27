@@ -1,0 +1,27 @@
+// в MySQL WorkBench в схеме тест
+
+CREATE TABLE test.`users` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  `email` varchar(125) NOT NULL,
+  `full_name` varchar(200) NOT NULL,
+  `activation_code` varchar(40) default NULL,
+  `activated` tinyint(1) unsigned default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  AUTO_INCREMENT=20 ;
+
+//DEFAULT CHARSET=latin1 ^ - тут был
+
+
+// в phpmyadmin
+CREATE TABLE test.`users` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  `email` varchar(125) NOT NULL,
+  `full_name` varchar(200) NOT NULL,
+  `activation_code` varchar(40) default NULL,
+  `activated` tinyint(1) unsigned default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  AUTO_INCREMENT=20 ;
